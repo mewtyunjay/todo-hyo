@@ -1,3 +1,4 @@
+const cors = require("cors")
 const db = require("./models/")
 const express = require("express") // our express server
 const app = express() // generate an app object
@@ -7,6 +8,7 @@ const PORT = process.env.PORT || 3001 // port that the server is running on => l
 
 
 app.use(bodyParser.json()) // telling the app that we are going to use json to handle incoming payload
+app.use(cors())
 
 function success(res, payload) {
   return res.status(200).json(payload)
