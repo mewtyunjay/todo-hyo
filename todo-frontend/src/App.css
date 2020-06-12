@@ -1,11 +1,10 @@
-body{
+body {
   background-color: #1a1a1b;
- 
 }
 
-.App{
+.App {
   background-color: #9266ff;
-  
+
   margin: 0 auto;
   text-align: center;
   margin-top: 5rem;
@@ -16,10 +15,9 @@ body{
   border-radius: 20px;
   width: 20%;
   height: 30rem;
-
 }
 
-#todo-input{
+#todo-input {
   border-radius: 8px;
   border: none;
   background-color: #e8f0f8;
@@ -41,7 +39,7 @@ button {
   height: 40px;
 }
 
-.li{
+.li {
   color: #fff;
   width: 300px;
   background-color: #bf07ac;
@@ -50,3 +48,7 @@ button {
   border-radius: 5px;
 }
 
+.completed {
+  color: #cdcdcd;
+  text-decoration: line-through;
+}
