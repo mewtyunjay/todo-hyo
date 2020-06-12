@@ -1,11 +1,10 @@
-body{
+body {
   background-color: #1a1a1b;
- 
 }
 
-.App{
+.App {
   background-color: #9266ff;
-  
+
   margin: 0 auto;
   text-align: center;
   margin-top: 5rem;
@@ -16,37 +15,5 @@ body{
   border-radius: 20px;
   width: 20%;
   height: 30rem;
-
-}
-
-#todo-input{
-  border-radius: 8px;
-  border: none;
-  background-color: #e8f0f8;
-  transition: all 0.4s ease-in-out;
-  padding-right: 0.5rem;
-  height: 35px;
-}
-
-button {
-  background-color: #e8f0f8;
-  font-weight: bold;
-  border-radius: 8px;
-  border: none;
-  outline: none;
-  padding: 0.4rem;
-  font-size: 18px;
-  box-shadow: 2px 1px #c5c0c0;
-  transition: all 0.4s ease-in-out;
-  height: 40px;
-}
-
-.li{
-  color: #fff;
-  width: 300px;
-  background-color: #bf07ac;
-  height: 50px;
-  margin: 20px auto;
-  border-radius: 5px;
 }
 
