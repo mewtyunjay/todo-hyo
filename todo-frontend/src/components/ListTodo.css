@@ -11,13 +11,24 @@ i:hover{
   padding: 4px 4px 4px 4px;
 }
 
-.task-list{
-
-  background-color : darkgrey;
-
-}
 
 .completed {
-  color: #cdcdcd;
+  background-color: rgb(83, 81, 81);
   text-decoration: line-through;
+  width: 78%;
+  margin-left: 0.2%;
+  margin-right: 0.2%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  border: none;
+  border-color: transparent;
+}
+
+.task-list{
+  background-color: darkgrey;
+  width: 80%;
+  margin-left: 0.1%;
+  margin-right: 0.1%;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }

@@ -1,9 +1,7 @@
 .text-field{
-  width: 80%;
+  width: 59%;
   margin-left: 10%;
-  margin-right: 10%;
+  margin-right: 4%;
+  background-color: darkgray;
+  margin-bottom: 2%;
 }
-
-/* input{
-  visibility: collapse;
-} */

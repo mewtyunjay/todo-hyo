@@ -8,10 +8,7 @@ const ListTodo = ({ todos, deleteTodo, updateTodo }) => {
         {todos && todos.length > 0 ? (
           todos.map((todo) => {
             return (
-              <div class="row">
-              <div className="col-md-3" />
-
-              <div className="col-md-6">
+              <div>
                 <input
                   className="toggle-all"
                   type="checkbox"
@@ -21,12 +18,9 @@ const ListTodo = ({ todos, deleteTodo, updateTodo }) => {
                     updateTodo(e, todo._id);
                   }}
                 />
-                <span
-                  class="spacing">
-                </span>
+                <span class="spacing"></span>
                 <input
-                  className={todo.completed ? "completed" : ""}
-                  // className="task-list"
+                  className={todo.completed ? "completed" : "task-list"}
                   id={todo._id}
                   type="text"
                   value={todo.task}
@@ -39,9 +33,6 @@ const ListTodo = ({ todos, deleteTodo, updateTodo }) => {
                 <span onClick={() => deleteTodo(todo._id)}>
                   <i class="fas fa-trash left-pad" aria-hidden="true"></i>
                 </span>
-                </div>
-
-                <div className="col-md-3" />
               </div>
             );
           })
