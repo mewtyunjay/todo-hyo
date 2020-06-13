@@ -36,10 +36,13 @@ class Input extends Component {
   render() {
     let { task } = this.state;
     return (
-      <div>
+      <div className="container row" style={{marginTop: 10}}>
+      <div className="col-md-2" />
+
+      <div className="col-md-8">
         <input
           type="text"
-          className="form-control text-field"
+          className="form-control "
           placeholder="Add a Todo"
           onChange={this.handleChange}
           value={task}
@@ -48,13 +51,15 @@ class Input extends Component {
         <button
           type="button"
           onClick={this.addTodo}
-          style={{marginLeft: 10 }}
+          style={{marginLeft: 300 }}
           className="btn btn-warning mb-2"
         >
           Add
         </button>
         <br />
         <br />
+        </div>
+        <div className="col-md-2" />
       </div>
     );
   }

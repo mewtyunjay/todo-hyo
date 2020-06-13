@@ -8,7 +8,10 @@ const ListTodo = ({ todos, deleteTodo, updateTodo }) => {
         {todos && todos.length > 0 ? (
           todos.map((todo) => {
             return (
-              <div>
+              <div class="row">
+              <div className="col-md-3" />
+
+              <div className="col-md-6">
                 <input
                   className="toggle-all"
                   type="checkbox"
@@ -36,6 +39,9 @@ const ListTodo = ({ todos, deleteTodo, updateTodo }) => {
                 <span onClick={() => deleteTodo(todo._id)}>
                   <i class="fas fa-trash left-pad" aria-hidden="true"></i>
                 </span>
+                </div>
+
+                <div className="col-md-3" />
               </div>
             );
           })
