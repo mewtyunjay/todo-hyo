@@ -18,8 +18,12 @@ const ListTodo = ({ todos, deleteTodo, updateTodo }) => {
                     updateTodo(e, todo._id);
                   }}
                 />
+                <span
+                  class="spacing">
+                </span>
                 <input
                   className={todo.completed ? "completed" : ""}
+                  // className="task-list"
                   id={todo._id}
                   type="text"
                   value={todo.task}
@@ -30,13 +34,13 @@ const ListTodo = ({ todos, deleteTodo, updateTodo }) => {
                 />
 
                 <span onClick={() => deleteTodo(todo._id)}>
-                  <i class="fa fa-trash" aria-hidden="true"></i>
+                  <i class="fas fa-trash left-pad" aria-hidden="true"></i>
                 </span>
               </div>
             );
           })
         ) : (
-          <p> No todos left</p>
+          <p> Empty List</p>
         )}
       </ul>
     </div>

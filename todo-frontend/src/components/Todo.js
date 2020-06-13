@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import "./Todo.css";
 
 import Input from "./AddTodo";
 import ListTodo from "./ListTodo";

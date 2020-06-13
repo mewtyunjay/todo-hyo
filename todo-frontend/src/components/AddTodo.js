@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
+import "./AddTodo.css";
+
 
 const API_URL = "http://localhost:3001/todos/";
 
@@ -22,7 +24,7 @@ class Input extends Component {
         })
         .catch((err) => console.log(err));
     } else {
-      console.log("input field required");
+      alert("Please enter a task first!");
     }
   };
   handleChange = (e) => {
@@ -37,19 +39,22 @@ class Input extends Component {
       <div>
         <input
           type="text"
-          className="form-control"
+          className="form-control text-field"
           placeholder="Add a Todo"
           onChange={this.handleChange}
           value={task}
         />
+        <br />
         <button
           type="button"
           onClick={this.addTodo}
-          style={{marginLeft: 320 }}
+          style={{marginLeft: 10 }}
           className="btn btn-warning mb-2"
         >
           Add
         </button>
+        <br />
+        <br />
       </div>
     );
   }

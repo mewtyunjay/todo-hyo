@@ -1,3 +1,22 @@
+.left-pad{
+  padding-left: 2%;
+}
+
+
+i:hover{
+  font-size: 110%;
+}
+
+.spacing{
+  padding: 4px 4px 4px 4px;
+}
+
+.task-list{
+
+  background-color : darkgrey;
+
+}
+
 .completed {
   color: #cdcdcd;
   text-decoration: line-through;
