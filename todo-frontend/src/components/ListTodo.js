@@ -53,7 +53,7 @@ const ListTodo = ({ todos, getTodos, deleteTodo, updateTodo}) => {
                   <i class="fas fa-angle-double-down" title="Decrease Priority" aria-hidden="true"></i>
                 </span>
                 <span onClick={() => deleteTodo(todo._id)}>
-                  <i class="fas fa-trash left-pad" aria-hidden="true"></i>
+                  <i class="fas fa-trash left-pad" title="Delete Task" aria-hidden="true"></i>
                 </span>
               </div>
             );

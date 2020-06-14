@@ -1,13 +1,12 @@
 const cors = require("cors")
 const db = require("./models/")
-const express = require("express") // our express server
-const app = express() // generate an app object
-const bodyParser = require("body-parser") // requiring the body-parser
-const PORT = process.env.PORT || 3001 // port that the server is running on => localhost:3000
+const express = require("express")
+const app = express()
+const bodyParser = require("body-parser")
+const PORT = process.env.PORT || 3001
 
 
-
-app.use(bodyParser.json()) // telling the app that we are going to use json to handle incoming payload
+app.use(bodyParser.json())
 app.use(cors())
 
 function success(res, payload) {
@@ -55,12 +54,11 @@ app.delete("/todos/:id", async (req, res, next) => {
 app.use((err, req, res, next) => {
   return res.status(err.status || 400).json({
     status: err.status || 400,
-    message: err.message || "there was an error processing request",
+    message: err.message || "There was an error processing request",
   })
 })
 
 
 app.listen(PORT, () => {
-  // listening on port 3000
-  console.log(`listening on port ${PORT}`) // print this when the server starts
+  console.log(`listening on port ${PORT}`)
 })
