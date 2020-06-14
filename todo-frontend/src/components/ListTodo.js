@@ -39,7 +39,8 @@ const ListTodo = ({ todos, getTodos, deleteTodo, updateTodo}) => {
                     updateTodo(todo, todo._id);
                   }}
                 >
-                  <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                  <i
+                  class="fas fa-angle-double-up" title="Increase Priority" aria-hidden="true"></i>
                 </span>
                 <span class="spacing"></span>
                 <span
@@ -49,7 +50,7 @@ const ListTodo = ({ todos, getTodos, deleteTodo, updateTodo}) => {
                     updateTodo(todo, todo._id);
                   }}
                 >
-                  <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                  <i class="fas fa-angle-double-down" title="Decrease Priority" aria-hidden="true"></i>
                 </span>
                 <span onClick={() => deleteTodo(todo._id)}>
                   <i class="fas fa-trash left-pad" aria-hidden="true"></i>
