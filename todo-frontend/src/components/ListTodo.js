@@ -1,7 +1,7 @@
 import React from "react";
 import "./ListTodo.css";
 
-const ListTodo = ({ todos, deleteTodo, updateTodo }) => {
+const ListTodo = ({ todos, getTodos, deleteTodo, updateTodo}) => {
   return (
     <div>
       <ul>
@@ -15,12 +15,15 @@ const ListTodo = ({ todos, deleteTodo, updateTodo }) => {
                   checked={todo.completed}
                   onChange={(e) => {
                     e.completed = e.target.checked;
+                    if (e.target.checked) e.priority = -1;
                     updateTodo(e, todo._id);
                   }}
                 />
                 <span class="spacing"></span>
                 <input
-                  className={todo.completed ? "completed" : "task-list"}
+                  className={
+                    todo.completed ? "completed" : "task-list" + todo.priority
+                  }
                   id={todo._id}
                   type="text"
                   value={todo.task}
@@ -29,7 +32,25 @@ const ListTodo = ({ todos, deleteTodo, updateTodo }) => {
                     updateTodo(todo, todo._id);
                   }}
                 />
-
+                <span class="spacing"></span>
+                <span
+                  onClick={(e) => {
+                    if (todo.priority > 0) todo.priority--;
+                    updateTodo(todo, todo._id);
+                  }}
+                >
+                  <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                </span>
+                <span class="spacing"></span>
+                <span
+                  onClick={(e) => {
+                    if (todo.priority < 0) todo.priority = 1;
+                    if (todo.priority < 2) todo.priority++;
+                    updateTodo(todo, todo._id);
+                  }}
+                >
+                  <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                </span>
                 <span onClick={() => deleteTodo(todo._id)}>
                   <i class="fas fa-trash left-pad" aria-hidden="true"></i>
                 </span>
@@ -37,7 +58,7 @@ const ListTodo = ({ todos, deleteTodo, updateTodo }) => {
             );
           })
         ) : (
-          <p> Empty List</p>
+          <h5> No Todos </h5>
         )}
       </ul>
     </div>

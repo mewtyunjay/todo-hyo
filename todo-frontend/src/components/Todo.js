@@ -21,9 +21,11 @@ class Todo extends Component {
       .get("http://localhost:3001/todos/")
       .then((res) => {
         if (res.data) {
-          this.setState({
-            todos: res.data,
+          var newTodo = res.data;
+          newTodo.sort(function (a, b) {
+              return a.priority > b.priority
           });
+          this.setState({ todos: newTodo });
         }
       })
       .catch((err) => console.log(err));
@@ -44,6 +46,7 @@ class Todo extends Component {
     const payload = {
       task: todo.task,
       completed: todo.completed,
+      priority: todo.priority,
     };
     axios
       .put(`${API_URL}${id}`, payload)
@@ -53,15 +56,19 @@ class Todo extends Component {
       .catch((err) => console.log(err));
   };
 
+
   render() {
     let { todos } = this.state;
 
     return (
       <div>
-        <center><h1>My Todo List</h1></center>
+        <center>
+          <h1>My Todo List</h1>
+        </center>
         <Input getTodos={this.getTodos} />
         <ListTodo
           todos={todos}
+          getTodos={this.getTodos}
           deleteTodo={this.deleteTodo}
           updateTodo={this.updateTodo}
         />

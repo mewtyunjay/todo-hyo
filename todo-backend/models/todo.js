@@ -13,6 +13,10 @@ const todoSchema = new mongoose.Schema({
     type: Boolean, // it is a boolean
     default: false, // the default is false
   },
+  priority: {
+    type: Number,
+    default: 2,
+  }
 });
 
 const todoModel = mongoose.model("Todo", todoSchema); // creating the model from the schema
